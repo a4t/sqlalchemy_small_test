@@ -1,7 +1,8 @@
 import os
-from sqlalchemy import *
-from sqlalchemy.orm import *
-from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy import create_engine
+from sqlalchemy.orm import sessionmaker 
+from sqlalchemy.orm import scoped_session
+
 
 DATABASE = 'mysql://%s:%s@%s:%s/%s' % (
     os.environ['username'],
