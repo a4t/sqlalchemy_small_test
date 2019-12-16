@@ -21,5 +21,7 @@ if __name__ == '__main__':
         except:
             print(sys.exc_info())
             pass
-        loop +=1
-        time.sleep(1)
+        finally:
+            session.close()
+            loop +=1
+            time.sleep(1)
